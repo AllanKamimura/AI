@@ -1,2 +1,4 @@
 # AI
-tensorflow, CNN, computer vision and things
+tensorflow,  
+CNN, computer vision  
+NLP   
