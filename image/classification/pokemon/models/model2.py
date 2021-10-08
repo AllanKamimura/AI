@@ -41,7 +41,7 @@ def loli_model():
 	fc_model = my_model(n_class = 149)
 
 	poke_model = tf.keras.models.Sequential([conv_model, fc_model], name = "my_model")
-	poke_model.load_weights("../weights/loli_model2.hdf5")
+	poke_model.load_weights("../weights/model2.hdf5")
 	print("load_model done")
 	return poke_model
 
