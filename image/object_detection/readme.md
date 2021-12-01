@@ -1,6 +1,15 @@
-not a Horse
-https://colab.research.google.com/github/AllanKamimura/AI/blob/master/object_detectionAPI/not_a_Horse.ipynb
+### **not a Horse**
+trained on few-shot model
 
-flap bird
-https://colab.research.google.com/github/AllanKamimura/AI/blob/master/object_detectionAPI/flap_bird.ipynb
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AllanKamimura/AI/blob/master/image/object_detection/not_a_Horse.ipynb)
 
+<img src = "../examples/detect_horse.gif" alt = "bird detect exemple" width = "500"/>
+
+----
+### **flap bird**
+detect bird position (not playing yet)
+
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AllanKamimura/AI/blob/master/image/object_detection/flap_bird.ipynb)
+
+<img src = "../examples/detect_bird.gif" alt = "bird detect exemple" height = "500"/>
