@@ -1,6 +1,7 @@
 import os
 import pathlib
 import scipy.io
+import numpy as np
 
 from PIL import Image
 
@@ -18,7 +19,8 @@ def read_matlab(matfile):
 		return m["data"]
 	
 	except Exception as e:
-		print(e)
+		m = np.loadtxt(matfile)
+		return m
 		
 def image_save_matlab(folder):
 	"""
