@@ -11,8 +11,8 @@ from collections import OrderedDict
 
 import numpy as np
 
-from iterator import BatchFromFilesMixin, Iterator
-from utils import validate_filename
+from .iterator import BatchFromFilesMixin, Iterator
+from .utils import validate_filename
 
 
 class DataFrameIterator(BatchFromFilesMixin, Iterator):

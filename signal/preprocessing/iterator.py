@@ -16,7 +16,7 @@ try:
 except ImportError:
     IteratorType = object
 
-from utils import array_to_img, img_to_array, load_img
+from .utils import array_to_img, img_to_array, load_img
 
 
 class Iterator(IteratorType):
