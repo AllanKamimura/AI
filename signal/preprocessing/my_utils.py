@@ -34,20 +34,31 @@ def image_save_matlab(folder):
 	
 	Outputs:
 		None
-	"""	
+	"""
 	
 	path = pathlib.PurePath(folder)
 	parent_folder = path.parent
 	folder_name = path.name
 	new_folder = os.path.join(parent_folder, folder_name + "_images")
 	
-	os.mkdir(new_folder)
-	
+	try:
+		os.mkdir(new_folder)
+	except:
+		pass
+
 	file_list = os.listdir(folder)
 	
 	for file_name in file_list:
-		matrix = read_matlab(file_name)
+		this_path = os.path.join(folder, file_name)
+
+		if os.path.isdir(this_path):
+			continue
+
+		matrix = read_matlab(
+			this_path
+		)
+  
 		Image.fromarray(matrix).save(
-                os.path.join(new_folder, file_name.split(".")[0] + ".tif")
-            )
+				os.path.join(new_folder, file_name.split(".")[0] + ".tif")
+			)
 		
