@@ -44,7 +44,7 @@ def image_save_matlab(folder):
 	file_list = os.listdir(folder)
 	
 	for file_name in file_list:
-		matrix = read_matlab(file_)
+		matrix = read_matlab(file_name)
 		Image.fromarray(matrix).save(
                 os.path.join(new_folder, file_name.split(".")[0] + ".tif")
             )
