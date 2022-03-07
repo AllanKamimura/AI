@@ -32,7 +32,7 @@ def read_csv(csvfile):
 	"""
 	return np.genfromtxt(csvfile, delimiter = ",")
 
-def image_save(folder):
+def image_save(folder, mode):
 	"""
 	
 	Read all files in a folder containing matrix in matlab format and save it as an .TIF image
@@ -41,7 +41,7 @@ def image_save(folder):
 	
 	Inputs:
 		folder [path]: path to the folder with matlab files to read
-	
+        mode [String]: file type, either "matlab" or "cvs"
 	Outputs:
 		None
 	"""
@@ -67,8 +67,9 @@ def image_save(folder):
 		if mode == "matlab":
 			matrix = read_matlab(
 				this_path
-			)
-  		elif mode == "csv":
+                )
+   
+		elif mode == "csv":
 			matrix = read_csv(
 				this_path
 			)
