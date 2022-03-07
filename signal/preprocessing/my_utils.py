@@ -21,8 +21,18 @@ def read_matlab(matfile):
 	except Exception as e:
 		m = np.loadtxt(matfile)
 		return m
-		
-def image_save_matlab(folder):
+
+def read_csv(csvfile):
+	"""
+	Inputs:
+		csvfile [path]: path to the csv file to read
+	
+	Outputs:
+		matrix [Numpy.narray]: matrix in Python readable format
+	"""
+	return np.genfromtxt(csvfile, delimiter = ",")
+
+def image_save(folder):
 	"""
 	
 	Read all files in a folder containing matrix in matlab format and save it as an .TIF image
@@ -53,11 +63,16 @@ def image_save_matlab(folder):
 
 		if os.path.isdir(this_path):
 			continue
-
-		matrix = read_matlab(
-			this_path
-		)
-  
+		
+		if mode == "matlab":
+			matrix = read_matlab(
+				this_path
+			)
+  		elif mode == "csv":
+			matrix = read_csv(
+				this_path
+			)
+			
 		Image.fromarray(matrix).save(
 				os.path.join(new_folder, file_name.split(".")[0] + ".tif")
 			)
