@@ -1,7 +1,7 @@
 ### **Satellite Imagery**
 3 classes: water, clouds, dust_clouds
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AllanKamimura/AI/blob/master/image/semantic_segmentaion/Satelite_image.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AllanKamimura/AI/blob/master/image/semantic_segmentation/Satelite_image.ipynb)
 
 <img src = "../examples/semantic_dust.jpg" alt = "semantic dust exemple" width = "500"/>
 <img src = "../examples/semantic_dust.gif" alt = "semantic dust exemple" width = "500"/>
